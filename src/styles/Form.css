@@ -1,0 +1,56 @@
+.wrapper{
+    background: #fff;
+    max-width: 400px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  }
+  
+  .wrapper header{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .wrapper .Form{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    height: 45px;
+  }
+  
+  .wrapper .Form .todo_input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+     
+  }
+  
+  .wrapper .Form .todo_input:focus{
+    border: 1px solid #E5E7EB;
+  }
+  
+  .wrapper .TodoList{
+    max-height: 250px;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0; 
+  }
+  
+  .wrapper .TodoList::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+  
+  .wrapper .TodoList::-webkit-scrollbar-thumb {
+    background: black;
+    border: 5px solid transparent;
+    background-color: #E5E7EB; 
+    border-color: transparent; 
+    border-style: solid; 
+  }

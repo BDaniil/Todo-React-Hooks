@@ -1,0 +1,36 @@
+.Clock{  
+    text-align: center;
+    font-size: large;
+    
+  }
+  
+  .Clock h1{
+    width: 10em;
+    margin: 5vh auto 0 auto;
+    border-radius: 0.2em;
+    padding: 0.4em 0;
+    
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+  }
+  
+  .Clock select{
+    border: 0 solid black;
+    width: 10em;
+    margin: 1vh auto 0 auto;
+    border-radius: 0.2em;
+    padding: 0.4em 0;
+    background-color: white;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+    
+  
+  }
+  
+  .Clock select option{   
+    background-color: #E5E7EB;
+  }

@@ -1,0 +1,74 @@
+.Todo{
+    position: relative;
+    list-style: none;
+    margin-bottom: 8px;
+    background: #f2f2f2;
+    border-radius: 3px;
+    padding: 10px 15px;
+    cursor: default;
+    overflow: hidden;
+    word-wrap: break-word;
+  
+  }
+  
+  .Todo .complete_button{
+    position: absolute;
+    right: -90px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #3ce75e;
+    width: 25px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .Todo:hover .complete_button{
+    right: 55px;
+  }
+  
+  .Todo .trash_button{
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e74c3c;
+    width: 25px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .Todo:hover .trash_button{
+    right: 0px;
+  }
+  
+  .completed{
+    text-decoration: line-through;
+  }
+  
+  .uncomplete{
+    background-color: #e7cd3c;
+    position: absolute;
+    right: -90px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .Todo:hover .uncomplete{
+    right: 55px;
+  }
+  
+  .uncomplete i{
+    transform: rotate(45deg);
+  }
