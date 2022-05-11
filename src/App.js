@@ -18,24 +18,36 @@ function getLength(length) {
   return length;
 }
 
+function getUnchecked(state) {
+  let checked = 0;
+  state.forEach(element => {
+    if (!element.completed) {
+      checked += 1;
+    }
+  });
+  return checked;
+}
+
 function App() {
-  const check = localStorage.getItem("todo_List");
+  
+  let check = localStorage.getItem("todo_List");
+  let check2 = localStorage.getItem("Location");
+  
+  if(check2 === null){
+    localStorage.setItem("Location", JSON.stringify("Europe/Chisinau"));
+  }
+
+
+  if(check === null) {
+    localStorage.setItem("todo_List","[]")
+    check="[]";
+  }
 
   const [state, dispatch] = useReducer(reducer, JSON.parse(check));
   const inputEl = useRef("");
   const id = useId();
 
   const memoItems = useMemo(() => getLength(state.length), [state.length]);
-
-  function getUnchecked(state) {
-    let checked = 0;
-    state.forEach(element => {
-      if (!element.completed) {
-        checked += 1;
-      }
-    });
-    return checked;
-  }
 
   const callbackItems = useCallback(() => getUnchecked(state), [state]);
 
@@ -61,7 +73,7 @@ function App() {
           {state.length > 0 ? (
             <>
               <div> Number of All Todos: {memoItems}</div>
-              <div> Number of Uncompleted Todos: {callbackItems(state)}</div>
+              <div> Number of Uncompleted Todos: {callbackItems()}</div>
             </>
           ) : (
             <> </>
