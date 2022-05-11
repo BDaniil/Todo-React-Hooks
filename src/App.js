@@ -30,17 +30,17 @@ function getUnchecked(state) {
 
 function App() {
   
-  let check = localStorage.getItem("todo_List");
-  let check2 = localStorage.getItem("Location");
+  let localTodo = localStorage.getItem("todo_List");
+  let localLocation = localStorage.getItem("Location");
   
-  if(check2 === null){
+  if(localLocation === null){
     localStorage.setItem("Location", JSON.stringify("Europe/Chisinau"));
   }
 
 
-  if(check === null) {
+  if(localTodo === null) {
     localStorage.setItem("todo_List","[]")
-    check="[]";
+    localTodo="[]";
   }
 
   const [state, dispatch] = useReducer(reducer, JSON.parse(check));
